@@ -9,25 +9,23 @@ The Fibonacci Heaps offer fast amortized time for insertions, deletions, and key
 In order to use the Fibonacci Heap you should download the attached file.
 
 ### FibonacciHeap Class
-| Function       | Description                                                                                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| boolean isEmpty()        | Returns True iff the heap is empty.|                                                                                                                                    
-| HeapNode insert(int i)    | Constructs a node of type HeapNode that contains the key i and puts it on the heap. Returns the created node.                                                                                   |
-| void deleteMin()   | Deletes the node whose key is minimal among the keys in the heap. |
-| HeapNode findMin()      |Returns the node whose key is minimal among the keys in the heap. Returns null if the Heap is empty.|
+| Function                | Description                                                |
+|-------------------------|------------------------------------------------------------|
+| boolean isEmpty()       | Returns True iff the heap is empty.                        |
+| HeapNode insert(int i)  | Constructs a node of type HeapNode that contains the key i and puts it on the heap. Returns the created node. |
+| void deleteMin()        | Deletes the node whose key is minimal among the keys in the heap. |
+| HeapNode findMin()      | Returns the node whose key is minimal among the keys in the heap. Returns null if the Heap is empty. |
+| void meld(FibonacciHeap heap2) | Melds the current heap with heap2.                  |
+| int size()              | Returns the number of items in the heap.                   |
+| int[] countersRep()     | Returns array s.t. the index i shows the number of trees in the heap whose order (rank) is i. For an empty heap an empty array will be returned. |
+| void delete(HeapNode x) | Deletes the node from the heap.                           |
+| void decreaseKey(HeapNode x, int d) | The value of the key of the node x will be reduced by the value d≥0. |
+| int nonMarked()         | Returns the amount of items in the heap which are not marked. |
+| int potential()         | Returns the current potential value of the heap. The potential is defined as: Potential = #trees + 2*#marked. |
+| static int totalLinks() | Returns the number of all links operations performed since the beginning of the program run. A link operation is the operation that receives two trees of the same order and connects them. |
+| static int totalCuts()  | Returns the number of all cuts operations performed since the beginning of the program run. A cut operation occurs due to decreaseKey, when a subtree is cut off from its parent (including cascading cuts). |
+| static int kMin(FibonacciHeap H, int k) | Receives a heap H which is a tree with rank deg⁡(H), and a positive number k<size(H). Returns a sorted array of the k smallest nodes in H. |
 
-| void meld(FibonacciHeap heap2)        | Melds the current heap with heap2.
-                                    |
-| int size()         | Returns the number of items in the heap.                                                                                    |
-| int[] countersRep()  | Returns array s.t. the index i shows the number of trees in the heap whose order (rank) is i. For an empty heap an empty array will be returned.                                              |
-| void delete(HeapNode x)  | Deletes the node from the heap.                                              |
-| void decreaseKey(HeapNode x, int d)  | The value of the key of the node x will be reduced by the value d≥0.                  |
-| int nonMarked()  | Returns the amount of items in the heap which are not marked.                  |
-| int potential()       | Returns the current potential value of the heap. The potential is definded as:
-Potential = #trees + 2*#marked                                                                                                            |
-| static int totalLinks()  | Returns the number of all links operations performed since the beginning of the program run. A link operation is the operation that receives two trees of the same order and connects them.                                        |
-| static int totalCuts()  | Returns the number of all cuts operations performed since the beginning of the program run. A cut operation occurs due to decreaseKey, when a subtree is cut off from its parent (including cascading cuts).                                       |
-| static int kMin(FibonacciHeap H, int k)  | Recives a heap H which is a tree with rank deg⁡(H), and a positive number k<size(H). Returns a sorted array of the k smallest nodes in H.                        |
 
 
 
