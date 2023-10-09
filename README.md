@@ -12,13 +12,13 @@ In order to use the Fibonacci Heap you should download the attached file.
 | Function                | Description                                                |
 |-------------------------|------------------------------------------------------------|
 | boolean **isEmpty**()      | Returns True iff the heap is empty.                        |
-| **HeapNode** insert(int i)  | Constructs a node of type HeapNode that contains the key i and puts it on the heap. Returns the created node. |
-| **void** deleteMin()        | Deletes the node whose key is minimal among the keys in the heap. |
-| **HeapNode** findMin()      | Returns the node whose key is minimal among the keys in the heap. Returns null if the Heap is empty. |
-| **void** meld(FibonacciHeap heap2) | Melds the current heap with heap2.                  |
-| **int** size()              | Returns the number of items in the heap.                   |
-| **int[]** countersRep()     | Returns array s.t. the index i shows the number of trees in the heap whose order (rank) is i. For an empty heap an empty array will be returned. |
-| **void** delete(HeapNode x) | Deletes the node from the heap.                           |
+| HeapNode **insert**(int i)  | Constructs a node of type HeapNode that contains the key i and puts it on the heap. Returns the created node. |
+| void **deleteMin**()        | Deletes the node whose key is minimal among the keys in the heap. |
+| HeapNode **findMin**()      | Returns the node whose key is minimal among the keys in the heap. Returns null if the Heap is empty. |
+| void **meld**(FibonacciHeap heap2) | Melds the current heap with heap2.                  |
+| int **size**()              | Returns the number of items in the heap.                   |
+| int[] **countersRep**()     | Returns array s.t. the index i shows the number of trees in the heap whose order (rank) is i. For an empty heap an empty array will be returned. |
+| void **delete**(HeapNode x) | Deletes the node from the heap.                           |
 | void **decreaseKey**(HeapNode x, int d) | The value of the key of the node x will be reduced by the value d≥0. |
 | int **nonMarked**()         | Returns the amount of items in the heap which are not marked. |
 | int **potential**()         | Returns the current potential value of the heap. The potential is defined as: Potential = #trees + 2*#marked. |
